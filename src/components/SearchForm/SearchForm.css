@@ -1,0 +1,62 @@
+.form-element {
+    margin-top: 30px;
+    box-shadow: 0px 0px 10px 2px #ececec9f;
+	padding: 15px;
+	border-radius: 5px;
+}
+.form-element label {
+    display: block;
+    font-weight: 700;
+    font-size: 12px;
+}
+.form-element .grey-label {
+    color: grey;
+    font-size: 12px;
+}
+.form-element input {
+    border: none;
+    outline: none;
+	color: #bbb;
+	font-size: 12px;
+	width: 100%;
+}
+.form-arrival-departure-element {
+    display: flex;
+    justify-content: space-between;
+}
+.form-guests-element-details {
+    height: 30px;
+    font-weight: 700;
+    border-bottom: 1px solid #80808075;
+}
+.guests-element-container {
+    padding: 0px 20px;
+}
+.form-guests-element {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+}
+.guests-number-change-button {
+    padding: 10px;
+    cursor: pointer;
+}
+.form-submit-button {
+    margin-top: 30px;
+    padding: 10px 0px;
+    width: 100%;
+    background-color: #2BDE8C;
+    color: white;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}
+.form-submit-button-icon {
+    margin-right: 5px;
+    font-size: 16px;
+    position: relative;
+    bottom: 2px;
+}

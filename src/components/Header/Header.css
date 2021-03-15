@@ -1,0 +1,32 @@
+.site-navbar {
+    padding: 10px 0px;
+    border-bottom: 1px solid #8080801e;
+}
+.site-name {
+    color: #2BDE8C;
+    font-size: 30px;
+    font-weight: 700;
+}
+.site-name:hover {
+    color: #2BDE8C;
+}
+.nav-link{
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+    color: black;
+    font-weight: 700;
+}
+.nav-link:hover{
+    color: #2BDE8C !important;
+}
+.button-signup {
+    margin-left: 10px;
+    padding: 7px 20px !important;
+    color: white !important;
+    background-color: #2BDE8C;
+    border: none;
+    border-radius: 50px;
+}
+.button-signup:hover {
+    color: white !important;
+}

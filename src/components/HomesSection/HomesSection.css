@@ -1,0 +1,27 @@
+.home-card-item {
+    padding: 10px 5px 10px 0px;
+}
+.home-card-img{
+    width: 100%;
+}
+.home-card-place {
+    padding: 2px 0px 5px 0px;
+    font-size: 10px;
+}
+p {
+    margin: 0;
+}
+.home-card-title {
+    font-weight: 700;
+}
+.home-card-rating {
+	color: #00a799;
+	font-weight: 300;
+    font-size: 14px;
+}
+.home-card-rating-point {
+    margin-left: 5px;
+    position: relative;
+    top: 2px;
+    color: black;
+}
