@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import dataHomes from "../../data/dataHomes/dataHomes";
-import dataExperience from "../../data/dataExperiences/dataExperiences";
+import dataHomes from "../../../data/dataHomes/dataHomes";
+import dataExperience from "../../../data/dataExperiences/dataExperiences";
 import "./Home.css";
 import SearchForm from "../SearchForm/SearchForm";
 import ExperienceSection from "../ExperienceSection/ExperienceSection";
@@ -59,7 +59,7 @@ const Home = () => {
                 {homesBlock.map((home) => {
                   return (
                     <div key={home.id} className="col-lg-4">
-                      <HomesSection home={home}></HomesSection>;
+                      <HomesSection home={home}></HomesSection>
                     </div>
                   );
                 })}

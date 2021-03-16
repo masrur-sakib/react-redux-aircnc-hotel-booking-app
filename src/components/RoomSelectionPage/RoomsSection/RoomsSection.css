@@ -1,0 +1,22 @@
+.room-section {
+    padding: 5% 5% 5% 10%;
+    height: 100%;
+    overflow: auto;
+}
+.search-short-description.span {
+    color: grey;
+    font-size: 14px;
+}
+.room-filters-section {
+    padding: 10px 0px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.room-filters-section p {
+    margin: 5px 10px 5px 0px;
+    padding: 5px 10px;
+    font-size: 14px;
+    border: 1px solid grey;
+    border-radius: 50px;
+    cursor: pointer;
+}
