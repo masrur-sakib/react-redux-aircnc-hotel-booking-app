@@ -26,7 +26,13 @@ const RoomInfo = (props) => {
   const subTotal = roomsNeeded * price * bookingInfo.totalStay;
 
   const roomInfoHandler = () => {
-    saveSelectedRoomInfo(bookingInfo, props.room, totalGuests, subTotal);
+    saveSelectedRoomInfo(
+      bookingInfo,
+      props.room,
+      roomsNeeded,
+      totalGuests,
+      subTotal
+    );
     history.push("/room-details");
   };
 

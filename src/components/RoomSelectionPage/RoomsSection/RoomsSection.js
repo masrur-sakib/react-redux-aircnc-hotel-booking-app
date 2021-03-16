@@ -30,7 +30,11 @@ const RoomsSection = ({ bookingInfo }) => {
           {bookingInfo.adults + bookingInfo.child + bookingInfo.babies}
         </span>
         <span> Guests</span>
-        <h4>{"Stay in " + bookingInfo.location + " Division"}</h4>
+        <h4>
+          Stay in &nbsp;
+          <span>{bookingInfo.location}</span>
+          &nbsp; Division
+        </h4>
       </div>
       <div className="room-filters-section">
         <p>Cancellation flexibility</p>

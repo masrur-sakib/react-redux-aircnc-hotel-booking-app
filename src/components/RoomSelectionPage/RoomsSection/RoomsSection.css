@@ -7,6 +7,10 @@
     color: grey;
     font-size: 14px;
 }
+h4 span {
+    text-transform: capitalize;
+    color: #2BDE8C;
+}
 .room-filters-section {
     padding: 10px 0px;
     display: flex;

@@ -3,7 +3,8 @@ import Header from "./components/Header/Header";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from "./components/HomePage/Home/Home";
 import RoomSelection from "./components/RoomSelectionPage/RoomSelection/RoomSelection";
-import RoomDetails from "./components/RoomDetailsPage/RoomDetails.js/RoomDetails";
+import RoomDetails from "./components/RoomDetailsPage/RoomDetails/RoomDetails";
+import BookingAgreement from "./components/BookingAgreementPage/BookingAgreement/BookingAgreement";
 
 function App() {
   return (
@@ -18,7 +19,10 @@ function App() {
             <RoomSelection />
           </Route>
           <Route path="/room-details">
-            <RoomDetails />
+            <RoomDetails></RoomDetails>
+          </Route>
+          <Route path="/booking-agreement">
+            <BookingAgreement />
           </Route>
         </Switch>
       </Router>

@@ -1,0 +1,16 @@
+.cover-images-section {
+    display: flex;
+    height: 400px;
+}
+.cover-images-section div {
+    width: 50%;
+    height: 100%;
+}
+.cover-images-section img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.room-content-summary-section {
+    padding: 50px;
+}

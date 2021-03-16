@@ -1,0 +1,59 @@
+.room-content-section {
+    margin-right: 30px;
+    padding-right: 2%;
+}
+.room-content-section-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.user-avatar-section img{
+    height: 50px;
+    width: 60px;
+    border-radius: 50%;
+}
+.location-and-facilities {
+    padding: 10px 0px;
+    border-bottom: 1px solid #80808080;
+}
+.room-content-section p{
+    color: grey;
+}
+p.hotel-location{
+    text-transform: capitalize;
+}
+.room-features {
+    padding: 10px 0px;
+    border-bottom: 1px solid #80808080;
+}
+.room-content-mini-section {
+    padding: 10px 0px;
+    width: 500px;
+    display: flex;
+    justify-content: flex-start;
+}
+.room-content-mini-section p {
+    margin: 0px;
+}
+.room-content-mini-section div{
+    padding-left: 20px;
+    position: relative;
+    bottom: 4px;
+}
+.room-content-description {
+    padding: 20px 0px;
+}
+.room-content-description p {
+    padding: 5px 0px;
+}
+.room-rating-section {
+    margin-top: -5px;
+    color: #00a799;
+    font-size: 14px;
+}
+.room-rating-section span {
+    color: black;
+    font-weight: 500;
+    position: relative;
+    top: 2px;
+}

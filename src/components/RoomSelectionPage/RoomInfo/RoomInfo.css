@@ -3,7 +3,7 @@
     border-bottom: 1px solid #80808080;
     cursor: pointer;
 }
-div img {
+div.room-info-element img {
     width: 100%;
     border-radius: 10px;
 }
@@ -26,6 +26,8 @@ div img {
 .rating-section span {
     color: black;
     font-weight: 500;
+    position: relative;
+    top: 2px;
 }
 p.room-price {
     color: black;

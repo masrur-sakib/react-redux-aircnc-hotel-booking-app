@@ -1,4 +1,8 @@
-import { SAVE_SELECTED_ROOM_INFO, SAVE_SUBMITTED_INFO } from "./aicncActions";
+import {
+  SAVE_RESERVATION_INFO,
+  SAVE_SELECTED_ROOM_INFO,
+  SAVE_SUBMITTED_INFO,
+} from "./aicncActions";
 
 const initialState = {
   bookingInfo: null,
@@ -12,6 +16,11 @@ const aircncReducers = (state = initialState, action) => {
       };
 
     case SAVE_SELECTED_ROOM_INFO:
+      return {
+        bookingInfo: action.payload,
+      };
+
+    case SAVE_RESERVATION_INFO:
       return {
         bookingInfo: action.payload,
       };
