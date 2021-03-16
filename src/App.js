@@ -5,6 +5,7 @@ import Home from "./components/HomePage/Home/Home";
 import RoomSelection from "./components/RoomSelectionPage/RoomSelection/RoomSelection";
 import RoomDetails from "./components/RoomDetailsPage/RoomDetails/RoomDetails";
 import BookingAgreement from "./components/BookingAgreementPage/BookingAgreement/BookingAgreement";
+import TravelPurpose from "./components/TravelPurposePage/TravelPurpose/TravelPurpose";
 
 function App() {
   return (
@@ -23,6 +24,9 @@ function App() {
           </Route>
           <Route path="/booking-agreement">
             <BookingAgreement />
+          </Route>
+          <Route path="/travel-purpose">
+            <TravelPurpose />
           </Route>
         </Switch>
       </Router>

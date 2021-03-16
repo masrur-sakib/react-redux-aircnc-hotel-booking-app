@@ -53,7 +53,7 @@ const BookingSummary = ({ bookingInfo, saveReservationInfo }) => {
             <strong>Total</strong>
           </p>
           <p>
-            <strong>{total}</strong>
+            <strong>{"$" + total}</strong>
           </p>
         </div>
         <button
