@@ -21,7 +21,9 @@ const TravelPurpose = ({ bookingInfo, saveTravelPurposeInfo }) => {
           <div className="row">
             <div className="col-lg-7">
               <div className="step-indicator">
-                <span>1. Review House Rules &gt; </span>
+                <span className="current-step">
+                  1. Review House Rules &gt;{" "}
+                </span>
                 <span className="current-step">2. Who's coming? &gt; </span>
                 <span>3. Confirm and pay</span>
               </div>
