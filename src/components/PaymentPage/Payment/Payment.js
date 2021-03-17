@@ -27,6 +27,23 @@ const Payment = ({ bookingInfo }) => {
                 <p className="py-3">Payment Selection</p>
                 <div className="payment-types">
                   <div className="stripe-payment">
+                    <div className="credit-card-section-description">
+                      <div>
+                        <p>
+                          <strong>Credit Card</strong>
+                        </p>
+                        <p>
+                          Safe money transfer using your bank account Visa,
+                          Mastercard, American Express
+                        </p>
+                      </div>
+                      <div>
+                        <img
+                          src="https://i.ibb.co/km0XzYt/credit-card-payment-image.png"
+                          alt=""
+                        />
+                      </div>
+                    </div>
                     <Elements stripe={stripePromise}>
                       <PaymentForm />
                     </Elements>
@@ -36,7 +53,7 @@ const Payment = ({ bookingInfo }) => {
             </div>
             <div className="col-lg-5">
               <div className="agreement-page-summary-container">
-                <BookingSummaryBlock />
+                {bookingInfo && <BookingSummaryBlock />}
               </div>
             </div>
           </div>
@@ -51,9 +68,5 @@ const mapStateToProps = (state) => {
     bookingInfo: state.bookingInfo,
   };
 };
-
-// const mapDispatchToProps = {
-//   saveTravelPurposeInfo: saveTravelPurposeInfo,
-// };
 
 export default connect(mapStateToProps, null)(Payment);

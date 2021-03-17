@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import "./PaymentForm.css";
 import { CardElement, useStripe, useElements } from "@stripe/react-stripe-js";
+import { clearInfo } from "../../../redux/aicncActions";
+import { connect } from "react-redux";
 
-const PaymentForm = () => {
+const PaymentForm = ({ bookingInfo, clearInfo }) => {
   const stripe = useStripe();
   const elements = useElements();
 
@@ -38,6 +40,8 @@ const PaymentForm = () => {
       setErrorMsg(null);
       setSuccessMsg(paymentMethod.id);
       console.log("[PaymentMethod]", paymentMethod);
+      clearInfo();
+      elements.getElement(CardElement).clear();
     }
   };
 
@@ -45,9 +49,15 @@ const PaymentForm = () => {
     <div>
       <form onSubmit={handleSubmit}>
         <CardElement />
-        <button type="submit" disabled={!stripe}>
-          Pay
-        </button>
+        <div className="stripe-payment-button-section">
+          <button
+            className="stripe-payment-button"
+            type="submit"
+            disabled={!stripe}
+          >
+            Continue to Pay
+          </button>
+        </div>
       </form>
       {errorMsg && <p className="pt-2 text-danger">{errorMsg}</p>}
       {successMsg && (
@@ -62,4 +72,14 @@ const PaymentForm = () => {
   );
 };
 
-export default PaymentForm;
+const mapStateToProps = (state) => {
+  return {
+    bookingInfo: state.bookingInfo,
+  };
+};
+
+const mapDispatchToProps = {
+  clearInfo: clearInfo,
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(PaymentForm);

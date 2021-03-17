@@ -1,4 +1,5 @@
 import {
+  CLEAR_INFO,
   SAVE_AGREEMENT_INFO,
   SAVE_RESERVATION_INFO,
   SAVE_SELECTED_ROOM_INFO,
@@ -35,6 +36,11 @@ const aircncReducers = (state = initialState, action) => {
     case SAVE_TRAVEL_PURPOSE_INFO:
       return {
         bookingInfo: action.payload,
+      };
+
+    case CLEAR_INFO:
+      return {
+        bookingInfo: null,
       };
 
     default:

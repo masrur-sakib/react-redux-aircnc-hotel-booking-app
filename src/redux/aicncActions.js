@@ -3,6 +3,7 @@ export const SAVE_SELECTED_ROOM_INFO = "SAVE_SELECTED_ROOM_INFO";
 export const SAVE_RESERVATION_INFO = "SAVE_RESERVATION_INFO";
 export const SAVE_AGREEMENT_INFO = "SAVE_AGREEMENT_INFO";
 export const SAVE_TRAVEL_PURPOSE_INFO = "SAVE_TRAVEL_PURPOSE_INFO";
+export const CLEAR_INFO = "CLEAR_INFO";
 
 export const saveSubmittedInfo = (info) => {
   // Total Stay Calculation
@@ -61,5 +62,10 @@ export const saveTravelPurposeInfo = (bookingInfo, travelPurpose) => {
       ...bookingInfo,
       travelPurpose: travelPurpose,
     },
+  };
+};
+export const clearInfo = () => {
+  return {
+    type: CLEAR_INFO,
   };
 };

@@ -1,0 +1,15 @@
+.stripe-payment-button-section {
+    display: flex;
+    justify-content: flex-end;
+}
+.stripe-payment-button {
+    margin-top: 10px;
+    padding: 7px 0px;
+    width: 120px;
+    background-color: #2BDE8C;
+    color: white;
+    font-size: 14px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}
