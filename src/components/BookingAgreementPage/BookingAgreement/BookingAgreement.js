@@ -1,5 +1,5 @@
 import React from "react";
-import BookingSummary from "../../RoomDetailsPage/BookingSummary/BookingSummary";
+import BookingSummaryBlock from "../BookingSummaryBlock/BookingSummaryBlock";
 import ReviewRules from "../ReviewRules/ReviewRules";
 import "./BookingAgreement.css";
 
@@ -21,7 +21,7 @@ const BookingAgreement = () => {
             </div>
             <div className="col-lg-5">
               <div className="agreement-page-summary-container">
-                <BookingSummary />
+                <BookingSummaryBlock />
               </div>
             </div>
           </div>

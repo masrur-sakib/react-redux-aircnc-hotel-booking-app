@@ -1,6 +1,8 @@
 export const SAVE_SUBMITTED_INFO = "SAVE_SUBMITTED_INFO";
 export const SAVE_SELECTED_ROOM_INFO = "SAVE_SELECTED_ROOM_INFO";
 export const SAVE_RESERVATION_INFO = "SAVE_RESERVATION_INFO";
+export const SAVE_AGREEMENT_INFO = "SAVE_AGREEMENT_INFO";
+export const SAVE_TRAVEL_PURPOSE_INFO = "SAVE_TRAVEL_PURPOSE_INFO";
 
 export const saveSubmittedInfo = (info) => {
   // Total Stay Calculation
@@ -40,6 +42,24 @@ export const saveReservationInfo = (bookingInfo, total) => {
     payload: {
       ...bookingInfo,
       total: total,
+    },
+  };
+};
+export const saveAgreementInfo = (bookingInfo) => {
+  return {
+    type: SAVE_SELECTED_ROOM_INFO,
+    payload: {
+      ...bookingInfo,
+      rulesAgreed: true,
+    },
+  };
+};
+export const saveTravelPurposeInfo = (bookingInfo, travelPurpose) => {
+  return {
+    type: SAVE_SELECTED_ROOM_INFO,
+    payload: {
+      ...bookingInfo,
+      travelPurpose: travelPurpose,
     },
   };
 };

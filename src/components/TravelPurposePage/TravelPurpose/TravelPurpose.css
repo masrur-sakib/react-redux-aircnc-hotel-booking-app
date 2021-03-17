@@ -1,0 +1,28 @@
+.travel-purpose-section {
+    padding: 50px 100px 0px 0px;
+}
+.travel-purpose-section-short-description {
+    display: flex;
+    justify-content: space-between;
+}
+.travel-purpose-section-short-description img{
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+}
+form textarea {
+    margin: 20px 0px 10px 0px;
+    padding: 10px;
+    width: 100%;
+}
+.travel-purpose-button {
+    margin-top: 5px;
+    padding: 8px 0px;
+    width: 150px;
+    background-color: #2BDE8C;
+    color: white;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}

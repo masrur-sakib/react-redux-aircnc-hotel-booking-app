@@ -4,8 +4,9 @@ import "./ReviewRules.css";
 import { FaBabyCarriage, FaSmoking } from "react-icons/fa";
 import { MdPets, MdDoNotDisturb } from "react-icons/md";
 import { useHistory } from "react-router";
+import { saveAgreementInfo } from "../../../redux/aicncActions";
 
-const ReviewRules = ({ bookingInfo }) => {
+const ReviewRules = ({ bookingInfo, saveAgreementInfo }) => {
   let history = useHistory();
 
   let arrivalFullDate = new Date(bookingInfo.arrival);
@@ -22,6 +23,7 @@ const ReviewRules = ({ bookingInfo }) => {
   let departureDay = departureFullDate.getUTCDate();
 
   const agreementHandler = () => {
+    saveAgreementInfo(bookingInfo);
     history.push("/travel-purpose");
   };
 
@@ -92,8 +94,8 @@ const mapStateToProps = (state) => {
   };
 };
 
-// const mapDispatchToProps = {
-// saveSelectedRoomInfo: saveSelectedRoomInfo,
-// };
+const mapDispatchToProps = {
+  saveAgreementInfo: saveAgreementInfo,
+};
 
-export default connect(mapStateToProps, null)(ReviewRules);
+export default connect(mapStateToProps, mapDispatchToProps)(ReviewRules);

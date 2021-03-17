@@ -6,6 +6,7 @@ import RoomSelection from "./components/RoomSelectionPage/RoomSelection/RoomSele
 import RoomDetails from "./components/RoomDetailsPage/RoomDetails/RoomDetails";
 import BookingAgreement from "./components/BookingAgreementPage/BookingAgreement/BookingAgreement";
 import TravelPurpose from "./components/TravelPurposePage/TravelPurpose/TravelPurpose";
+import Payment from "./components/PaymentPage/Payment/Payment";
 
 function App() {
   return (
@@ -27,6 +28,9 @@ function App() {
           </Route>
           <Route path="/travel-purpose">
             <TravelPurpose />
+          </Route>
+          <Route path="/payment">
+            <Payment />
           </Route>
         </Switch>
       </Router>
