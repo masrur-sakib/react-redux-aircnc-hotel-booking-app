@@ -7,6 +7,7 @@ import RoomDetails from "./components/RoomDetailsPage/RoomDetails/RoomDetails";
 import BookingAgreement from "./components/BookingAgreementPage/BookingAgreement/BookingAgreement";
 import TravelPurpose from "./components/TravelPurposePage/TravelPurpose/TravelPurpose";
 import Payment from "./components/PaymentPage/Payment/Payment";
+import Login from "./components/LoginPage/Login/Login";
 
 function App() {
   return (
@@ -31,6 +32,12 @@ function App() {
           </Route>
           <Route path="/payment">
             <Payment />
+          </Route>
+          <Route path="/login">
+            <Login pageName={"Log In"} />
+          </Route>
+          <Route path="/signup">
+            <Login pageName={"Sign Up"} />
           </Route>
         </Switch>
       </Router>

@@ -1,0 +1,39 @@
+.login-section{
+    width: 400px;
+    display:block;
+    color: grey;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.login-title{
+    color: black;
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.login-section select,
+.login-section input{
+    padding: 20px;
+    width: 100%;
+    font-weight: 500;
+    display: block;
+    border: 1px solid #ececec9f;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px 2px #ecececb6;
+}
+.login-section p{
+    padding: 10px 5px;
+    font-size: 12px;
+}
+.login-button{
+    width:100%;
+    padding: 10px 0px;
+    display:block;
+    color: white;
+    background-color: #2BDE8C;
+    border: none;
+    border-radius: 5px;
+}
