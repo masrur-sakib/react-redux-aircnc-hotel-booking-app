@@ -7,7 +7,8 @@ import RoomDetails from "./components/RoomDetailsPage/RoomDetails/RoomDetails";
 import BookingAgreement from "./components/BookingAgreementPage/BookingAgreement/BookingAgreement";
 import TravelPurpose from "./components/TravelPurposePage/TravelPurpose/TravelPurpose";
 import Payment from "./components/PaymentPage/Payment/Payment";
-import Login from "./components/LoginPage/Login/Login";
+import Authentication from "./components/AuthenticationPage/Authentication/Authentication";
+import NotFound from "./components/NotFound/NotFound";
 
 function App() {
   return (
@@ -34,10 +35,10 @@ function App() {
             <Payment />
           </Route>
           <Route path="/login">
-            <Login pageName={"Log In"} />
+            <Authentication />
           </Route>
-          <Route path="/signup">
-            <Login pageName={"Sign Up"} />
+          <Route path="*">
+            <NotFound />
           </Route>
         </Switch>
       </Router>

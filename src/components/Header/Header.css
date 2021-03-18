@@ -1,32 +1,43 @@
 .site-navbar {
-    padding: 10px 0px;
-    border-bottom: 1px solid #8080801e;
+  padding: 10px 0px;
+  border-bottom: 1px solid #8080801e;
 }
 .site-name {
-    color: #2BDE8C;
-    font-size: 30px;
-    font-weight: 700;
+  color: #2bde8c;
+  font-size: 30px;
+  font-weight: 700;
 }
 .site-name:hover {
-    color: #2BDE8C;
+  color: #2bde8c;
 }
-.nav-link{
-    padding-left: 15px !important;
-    padding-right: 15px !important;
-    color: black;
-    font-weight: 700;
+.nav-link {
+  padding-left: 15px !important;
+  padding-right: 15px !important;
+  color: black;
+  font-weight: 700;
 }
-.nav-link:hover{
-    color: #2BDE8C !important;
+.nav-link:hover {
+  color: #2bde8c !important;
 }
 .button-signup {
-    margin-left: 10px;
-    padding: 7px 20px !important;
-    color: white !important;
-    background-color: #2BDE8C;
-    border: none;
-    border-radius: 50px;
+  margin-left: 10px;
+  padding: 7px 20px !important;
+  color: white !important;
+  background-color: #2bde8c;
+  border: none;
+  border-radius: 50px;
 }
 .button-signup:hover {
-    color: white !important;
+  color: white !important;
+}
+.button-logout {
+  margin-left: 10px;
+  padding: 7px 20px !important;
+  color: white !important;
+  background-color: red;
+  border: none;
+  border-radius: 50px;
+}
+.button-logout:hover {
+  color: white !important;
 }

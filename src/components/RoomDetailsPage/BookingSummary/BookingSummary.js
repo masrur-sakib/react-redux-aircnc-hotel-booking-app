@@ -5,12 +5,15 @@ import { connect } from "react-redux";
 import { saveReservationInfo } from "../../../redux/aicncActions";
 import { useHistory } from "react-router";
 
-const BookingSummary = ({ bookingInfo, saveReservationInfo }) => {
+const BookingSummary = ({ bookingInfo, userLoggedIn, saveReservationInfo }) => {
   let history = useHistory();
   const total = bookingInfo.subTotal + 10 + 10;
   const reservationInfoHandler = () => {
     saveReservationInfo(bookingInfo, total);
     history.push("/booking-agreement");
+  };
+  const userSignInHandler = () => {
+    history.push("/login");
   };
   return (
     <div className="booking-summary-block">
@@ -56,12 +59,22 @@ const BookingSummary = ({ bookingInfo, saveReservationInfo }) => {
             <strong>{"$" + total}</strong>
           </p>
         </div>
-        <button
-          className="summary-reserve-button"
-          onClick={reservationInfoHandler}
-        >
-          Reserve
-        </button>
+        {userLoggedIn === true ? (
+          <button
+            className="summary-reserve-button"
+            onClick={reservationInfoHandler}
+          >
+            Reserve
+          </button>
+        ) : (
+          <button
+            className="summary-reserve-button"
+            onClick={userSignInHandler}
+          >
+            Reserve
+          </button>
+        )}
+
         <p className="summary-note">You won't be charged yet.</p>
       </div>
     </div>
@@ -71,6 +84,7 @@ const BookingSummary = ({ bookingInfo, saveReservationInfo }) => {
 const mapStateToProps = (state) => {
   return {
     bookingInfo: state.bookingInfo,
+    userLoggedIn: state.userLoggedIn,
   };
 };
 

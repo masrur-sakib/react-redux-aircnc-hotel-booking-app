@@ -1,8 +1,9 @@
 import React from "react";
+import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import "./Header.css";
 
-const Header = () => {
+const Header = ({ userLoggedIn }) => {
   return (
     <div className="site-navbar">
       <div className="container">
@@ -58,20 +59,34 @@ const Header = () => {
                     Help
                   </Link>
                 </li>
-                <li className="nav-item">
-                  <Link
-                    className="nav-link"
-                    style={{ textDecoration: "none" }}
-                    to="/login"
-                  >
-                    Log In
-                  </Link>
-                </li>
-                <li className="nav-item">
-                  <Link to="/signup" style={{ textDecoration: "none" }}>
-                    <button className="nav-link button-signup">Sign Up</button>
-                  </Link>
-                </li>
+                {userLoggedIn === true ? (
+                  <li className="nav-item">
+                    <Link to="/login" style={{ textDecoration: "none" }}>
+                      <button className="nav-link button-logout">
+                        Log Out
+                      </button>
+                    </Link>
+                  </li>
+                ) : (
+                  <>
+                    <li className="nav-item">
+                      <Link
+                        className="nav-link"
+                        style={{ textDecoration: "none" }}
+                        to="/login"
+                      >
+                        Log In
+                      </Link>
+                    </li>
+                    <li className="nav-item">
+                      <Link to="/login" style={{ textDecoration: "none" }}>
+                        <button className="nav-link button-signup">
+                          Sign Up
+                        </button>
+                      </Link>
+                    </li>
+                  </>
+                )}
               </ul>
             </div>
           </div>
@@ -81,4 +96,10 @@ const Header = () => {
   );
 };
 
-export default Header;
+const mapStateToProps = (state) => {
+  return {
+    userLoggedIn: state.userLoggedIn,
+  };
+};
+
+export default connect(mapStateToProps, null)(Header);
