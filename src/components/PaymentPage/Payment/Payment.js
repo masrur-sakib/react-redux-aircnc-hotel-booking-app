@@ -9,7 +9,6 @@ import PaymentForm from "../PaymentForm/PaymentForm";
 const stripePromise = loadStripe("pk_test_HQajl2JHQiUqsUrjiPOEEpOZ00SOr6tG6W");
 
 const Payment = ({ bookingInfo }) => {
-  console.log(bookingInfo);
   return (
     <div>
       <div className="container">
