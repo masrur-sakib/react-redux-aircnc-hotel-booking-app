@@ -1,11 +1,16 @@
+.login-page {
+  height: calc(100vh - 100px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
 .login-section {
-  width: 400px;
-  display: block;
+  margin: 10px;
+  max-width: 400px;
   color: grey;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  overflow: hidden;
 }
 .login-title {
   color: black;
