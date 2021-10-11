@@ -8,87 +8,52 @@ const Header = ({ userLoggedIn }) => {
     <div className="site-navbar">
       <div className="container">
         <nav className="navbar navbar-expand-lg navbar-light">
-          <div className="container-fluid">
-            <Link
-              className="site-name"
-              style={{ textDecoration: "none" }}
-              to="/"
-            >
-              Aircnc
-            </Link>
-            <button
-              className="navbar-toggler"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarNavAltMarkup"
-              aria-controls="navbarNavAltMarkup"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <span className="navbar-toggler-icon"></span>
-            </button>
-            <div
-              className="navbar-collapse collapse justify-content-end"
-              id="navbarNavAltMarkup"
-            >
-              <ul className="navbar-nav">
-                <li className="nav-item active">
-                  <Link
-                    className="nav-link"
-                    style={{ textDecoration: "none" }}
-                    to="#"
-                  >
-                    Host Your Home
-                  </Link>
-                </li>
+          <Link className="site-name" style={{ textDecoration: "none" }} to="/">
+            Aircnc
+          </Link>
+          <button
+            className="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span className="navbar-toggler-icon"></span>
+          </button>
+          <div
+            className="navbar-collapse collapse justify-content-end"
+            id="navbarNavAltMarkup"
+          >
+            <ul className="navbar-nav">
+              {userLoggedIn === true ? (
                 <li className="nav-item">
-                  <Link
-                    className="nav-link"
-                    style={{ textDecoration: "none" }}
-                    to="#"
-                  >
-                    Host Your Experience
+                  <Link to="/login" style={{ textDecoration: "none" }}>
+                    <button className="nav-link button-logout">Log Out</button>
                   </Link>
                 </li>
-                <li className="nav-item">
-                  <Link
-                    className="nav-link"
-                    style={{ textDecoration: "none" }}
-                    to="#"
-                  >
-                    Help
-                  </Link>
-                </li>
-                {userLoggedIn === true ? (
+              ) : (
+                <>
+                  <li className="nav-item">
+                    <Link
+                      className="nav-link"
+                      style={{ textDecoration: "none" }}
+                      to="/login"
+                    >
+                      Log In
+                    </Link>
+                  </li>
                   <li className="nav-item">
                     <Link to="/login" style={{ textDecoration: "none" }}>
-                      <button className="nav-link button-logout">
-                        Log Out
+                      <button className="nav-link button-signup">
+                        Sign Up
                       </button>
                     </Link>
                   </li>
-                ) : (
-                  <>
-                    <li className="nav-item">
-                      <Link
-                        className="nav-link"
-                        style={{ textDecoration: "none" }}
-                        to="/login"
-                      >
-                        Log In
-                      </Link>
-                    </li>
-                    <li className="nav-item">
-                      <Link to="/login" style={{ textDecoration: "none" }}>
-                        <button className="nav-link button-signup">
-                          Sign Up
-                        </button>
-                      </Link>
-                    </li>
-                  </>
-                )}
-              </ul>
-            </div>
+                </>
+              )}
+            </ul>
           </div>
         </nav>
       </div>

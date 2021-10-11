@@ -68,21 +68,20 @@ const Authentication = ({ userLogin, userLogOut }) => {
     userLogOut();
   };
 
-  const authListener = () => {
-    fire.auth().onAuthStateChanged((user) => {
-      if (user) {
-        clearInputs();
-        setUser(user);
-        userLogin();
-      } else {
-        setUser("");
-      }
-    });
-  };
-
   useEffect(() => {
+    const authListener = () => {
+      fire.auth().onAuthStateChanged((user) => {
+        if (user) {
+          clearInputs();
+          setUser(user);
+          userLogin();
+        } else {
+          setUser("");
+        }
+      });
+    };
     authListener();
-  }, []);
+  }, [userLogin]);
 
   return (
     <div>
